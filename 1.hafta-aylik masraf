@@ -1,0 +1,30 @@
+'''Aylik masraf programi
+
+Icerik:
+Aylık giderleri ve bu giderlerin aylik gelire oranini hesaplayan bir program yapmanız istenmektedir.
+
+Yontem:
+Asagida belirtilen harcama kalemlerini ve aylik geliri kullanicidan input ile alip gerekli hesaplamalari yapin
+
+Harcama kalemleri:
+-mutfak,
+-egitim,
+-giyim,
+-ulasim.
+
+Sonuc:
+1-Kullanicinin aylik toplam masrafini ve bu masrafin aylik gelirine oranini ekrana printleyin.
+2- Ayni sonucu “aylikmasraf” isimli bir dosyaya kaydedin.'''
+
+
+mutfak=float(input("aylik mutfak masraflarini giriniz"))
+egitim=float(input("aylik egitim masraflarini giriniz"))
+giyim=float(input("aylik giyim masraflarini giriniz"))
+ulasim=float(input("aylik ulasim masraflarini giriniz"))
+aylik_gelir=float(input("aylik gelirinizi giriniz"))
+print("toplam aylik masrafiniz =", mutfak+egitim+giyim+ulasim, "\n",
+      "Bu masraflarin aylik gelire orani =", (mutfak+egitim+giyim+ulasim)*100/aylik_gelir)
+belge=open("aylikmasraf.txt","w")
+print("toplam aylik masrafiniz =", mutfak+egitim+giyim+ulasim, "\n",
+      "Bu masraflarin aylik gelire orani =", (mutfak+egitim+giyim+ulasim)*100/aylik_gelir, sep="",file=belge)
+belge.close()
