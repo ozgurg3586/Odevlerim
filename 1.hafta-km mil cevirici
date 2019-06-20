@@ -1,0 +1,5 @@
+#Kullanıcıdan input ile km cinsinden mesafe bilgisi alıp, bu bilgiyi mile dönüştürün ve sonucu ekrana printleyin.
+
+km=float(input("mile cevirmek istediginiz km yi yaziniz"))
+mil=km*0.62
+print(km,"km =",mil,"mildir." )
