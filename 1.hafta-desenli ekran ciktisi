@@ -1,0 +1,12 @@
+#1-Input ile kullanıcıdan bir kelime yazmasını isteyip, bu kelimeyi altı çizili ve etrafı desenli bir şekilde printleyin.
+
+kelime=input("desenlemek istediginiz kelimeyi yaziniz=")
+print("          "+"#"*len(kelime)+"\n",
+      "        "+"#"+" "*len(kelime)+"#"+"\n",
+      "      "+"#"+" "*len(kelime)+"#"+"\n",
+      "        "+kelime+"               "+"\n",
+      "        "+"_"*len(kelime)+"         "+"\n",
+      "      "+"#"+" "*len(kelime)+"#"+"\n",
+      "        "+"#"+" "*len(kelime)+"#"+"\n",
+      "          "+"#"*len(kelime)+"\n")
+      
