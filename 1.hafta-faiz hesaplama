@@ -1,0 +1,35 @@
+'''Faiz hesaplama programi
+
+Icerik:
+Kullanicidan gerekli bilgileri alip faiz tutarini hesaplayin.
+
+Yontem:
+Bu programi calistirabilmeniz icin asagida belirtilen bilgileri input yardimi ile kullanicidan almaniz gerekmektedir.
+    ⁃    Ana para
+    ⁃    Faiz suresi (yil)
+    ⁃    Faiz orani
+
+Faiz hesaplama formulu:
+Ana para x faiz suresi x faiz orani / 100
+
+Sonuc:
+Gerekli islemleri yaptiktan sonra output olarak toplam faiz tutarini, aylik ve gunluk ortalama faiz tutarini, toplam para miktarini (faiz+ana para);
+ 1) print ile ekrana yazin,
+ 2) ”faizHesaplama” isimli bir dosyaya
+     kaydedin.'''
+
+ana_para=int(input("ana paranizi giriniz"))
+faiz_suresi=float(input("faiz suresini giriniz"))
+faiz_orani= float(input("faiz orani nedir"))
+toplam_faiz=(ana_para*faiz_suresi*faiz_orani)/100
+print("toplam faiz tutari =", toplam_faiz, "\n",
+      "aylik faiz =", toplam_faiz/12, "\n",
+      "gunluk faiz tutari =", toplam_faiz/365, "\n",
+      "toplam para miktari =", ana_para+toplam_faiz, sep= "")
+dokuman= open("faizHesaplama.txt","w")
+
+print("toplam faiz tutari =", toplam_faiz, "\n",
+      "aylik faiz =", toplam_faiz/12, "\n",
+      "gunluk faiz tutari =", toplam_faiz/365, "\n",
+      "toplam para miktari =", ana_para+toplam_faiz, sep= "", file=dokuman)
+dokuman.close()
